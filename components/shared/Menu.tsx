@@ -2,9 +2,9 @@ import React from "react";
 import Image from "next/image";
 const Menu = () => {
   const menuitems = [
-      {name:'Home',logo:'/home.svg',link:'/'},
-      {name:'Mushroom Store',logo:'/store.svg',link:'/mushroomStore'},
-      {name:'Cart',logo:'/cart.svg',link:'/cart'}
+      {name:'Home',logo:'/home.png',link:'/'},
+      {name:'Mushroom Store',logo:'/pickup.png',link:'/mushroomStore'},
+      {name:'Cart',logo:'/cart.png',link:'/cart'}
   ]
   const socials = [{icon:'/facebook.svg',src:'/facebook.com'},{icon:'/instagram.svg',src:'/instagram.com'},{icon:'/whatsapp.svg',src:'whatsapp.com'}]
   return (

@@ -7,7 +7,7 @@ const Footer = () => {
             <footer className="bg-black flex flex-col lg:items-center mt-[100px] py-10">
                 <Image alt="logo" width={100} height={100} src="/logo.svg" className="m-auto" />
                 <div className="flex flex-col lg:flex-row lg:items-baseline lg:gap-28 px-8 py-8 ">
-                    <div className=" flex flex-col  lg:items-start    mt-5  lg:mt-0 rounded-lg">
+                    <div className=" flex flex-col  lg:items-start mt-5  lg:mt-0 rounded-lg">
                         <p className="footer-heading mt-3   ">Connect With Us</p>
                         <div className="flex gap-3 cursor-pointer mt-2">
                             {socials.map((item, index) => (
