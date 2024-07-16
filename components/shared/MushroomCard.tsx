@@ -9,10 +9,11 @@ const mushroomsCard = () => {
     const { addToCart } = useCart();
     const router = useRouter();
     const handleAddToCart = () => {
-        const product = { id: 1, name: 'Oyster Mushroom', price: 200, quantity };
+        const product = { id: 1, name: 'Oyster Mushroom', price: 200, image:'/oyster.png', quantity };
         addToCart(product);
         router.push('/cart');
       };
+      
 
     return (
         <>
@@ -24,6 +25,7 @@ const mushroomsCard = () => {
                         <div key={index} className="flex flex-col items-center text-center gap-3 ">
                             <Link href={item.link}>
                             <Image alt="Mushroom 1" width={200} height={400} src={item.image} className="rounded-lg shadow-sm" />
+                            </Link>
                             <h3 className=" card-heading  ">{item.name}</h3>
                             <p className="text-xl">ksh.200</p>
                             <h3 className=" card-heading mt-3 text-xl">Quantity</h3>
@@ -37,7 +39,6 @@ const mushroomsCard = () => {
                                 <Image src="/cart.png" alt="delivery icon" width={20} height={20} className='ml-2' />
                                 </button>
                             </div>
-                            </Link>
                         </div>
                     ))}
 
