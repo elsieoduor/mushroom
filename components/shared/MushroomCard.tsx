@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useCart } from './CartContext';
 const mushroomsCard = () => {
-    const product = [{image:'/oyster.png',name:'Oyster',price:'ksh.200',link:'/product/oyster-mushrooms'},{image:'/buttonMush.png',name:'Button',price:'ksh.300',link:'/product/oyster-mushrooms' }]
+    const products = [{image:'/oyster.png',name:'Oyster',price:'ksh.200',link:'/product/oyster-mushrooms'},{image:'/buttonMush.png',name:'Button',price:'ksh.300',link:'/product/oyster-mushrooms' }]
     const [quantity, setQuantity] = useState(1);
     const { addToCart } = useCart();
     const router = useRouter();
@@ -21,7 +21,7 @@ const mushroomsCard = () => {
 
                 <div className="flex flex-col  md:flex-row lg:flex-row gap-10 lg:gap-[200px]">
 
-                    {product.map((item, index) => (
+                    {products.map((item, index) => (
                         <div key={index} className="flex flex-col items-center text-center gap-3 ">
                             <Link href={item.link}>
                             <Image alt="Mushroom 1" width={200} height={400} src={item.image} className="rounded-lg shadow-sm" />
