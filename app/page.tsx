@@ -25,7 +25,7 @@ export default function Home() {
           </div>
         </div>
         <div className="rounded-lg shadow-sm" >
-          <Image alt="hero image" width={400} height={400} src='/mushroom-hand.png' />
+          <Image alt="hero image" width={400} height={400} src='/mushroom-hand.png' className="rounded-lg shadow-sm"  />
         </div>
       </section>
 
