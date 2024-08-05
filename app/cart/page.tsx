@@ -1,10 +1,18 @@
 'use client';
+
 import React, { useState } from 'react';
 import { useCart } from '../../components/shared/CartContext';
 import Image from 'next/image';
 import Navbar from '@/components/shared/Navbar';
 import Footer from '@/components/shared/Footer';
-import Link from 'next/link';
+
+interface CartItem {
+  id: number;
+  image: string;
+  name: string;
+  price: number;
+  quantity: number;
+}
 
 interface FormData {
   name: string;
@@ -16,7 +24,6 @@ interface FormData {
 
 const CartPage: React.FC = () => {
   const { cart, removeFromCart, updateQuantity } = useCart();
-  
 
   const [formData, setFormData] = useState<FormData>({
     name: '',
@@ -56,7 +63,7 @@ const CartPage: React.FC = () => {
 
   const handleCheckout = () => {
     const message = generateWhatsAppMessage();
-    window.location.href = `https://wa.me/ENTER_WHATSAPP_NUMBER?text=${message}`;
+    window.location.href = `https://wa.me/+254743040210?text=${message}`;
   };
 
   const totalAmount = cart.reduce((total, item) => total + item.price * item.quantity, 0);
@@ -68,7 +75,7 @@ const CartPage: React.FC = () => {
       {/* TopText */}
       <section className="text-center mt-10 md:mt-20">
         <h1 className="text-2xl md:text-4xl font-bold">Shopping Cart</h1>
-        <p className="mt-2 mb-10 md:mb-20 text-xs md:text-sm ">
+        <p className="mt-2 mb-10 md:mb-20 text-xs md:text-sm">
           Confirm your details and order request. <br />
           After that, you will get prompt assistance <br />
           over the phone and receive <br /> your order quickly.
@@ -134,7 +141,7 @@ const CartPage: React.FC = () => {
         </form>
       </section>
 
-      {/* Summary  of Products */}
+      {/* Summary of Products */}
       <section>
         <div className="p-4 text-white">
           <h3 className="text-xs md:text-base mb-1">Confirm that the items in your cart are as desired and confirm your order request.</h3>

@@ -10,7 +10,7 @@ import Footer from '@/components/shared/Footer';
 
 const Page = () => {
   const items = [
-    { src: '/buttonMush.png', name: 'Button Mushroom', price: 'Kshs. 300' },
+    { src: '/button.jpg', name: 'Button Mushroom', price: 'Kshs. 300' },
   ];
   const [quantity, setQuantity] = useState(1);
   const { addToCart } = useCart();
@@ -44,7 +44,7 @@ const Page = () => {
         <section className="flex flex-col items-center">
           {/* Image */}
           <div className="mb-10 w-full max-w-md">
-            <Image src="/oyster.png" alt="Mushroom Image" width={500} height={300} className="w-full h-auto rounded-md"/>
+            <Image src="/oyster.png" alt="Mushroom Image" width={500} height={300} className="w-full h-auto rounded-md object-fit"/>
           </div>
 
           {/* Text */}

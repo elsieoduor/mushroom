@@ -17,7 +17,7 @@ const page = () => {
   const router = useRouter();
 
   const handleAddToCart = () => {
-    const product = { id: 1, name: 'Button Mushroom', price: 200, image:'/buttonMush.png',quantity };
+    const product = { id: 1, name: 'Button Mushroom', price: 200, image:'/button.jpg',quantity };
     addToCart(product);
     router.push('/cart');
   };
@@ -44,7 +44,7 @@ const page = () => {
         <section className="flex flex-col items-center">
           {/* Image */}
           <div className="mb-10 w-full max-w-lg">
-            <Image src="/buttonMush.png" alt="Mushroom Image" width={500} height={300} className="w-full object-cover rounded-md"/>
+            <Image src="/button.jpg" alt="Mushroom Image" width={500} height={300} className="w-full object-cover rounded-md"/>
           </div>
 
           {/* Text */}

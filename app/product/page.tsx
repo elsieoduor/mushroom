@@ -18,7 +18,7 @@ interface Product {
 const Page: React.FC = () => {
   const products: Product[] = [
     { image: '/oyster.png', name: 'Oyster', price: 'ksh.200', link:'/product/oyster-mushrooms', quantity: 1 },
-    { image: '/buttonMush.png', name: 'Button', price: 'ksh.300', link:'/product/button-mushrooms', quantity: 1 }
+    { image: '/button.jpg', name: 'Button', price: 'ksh.300', link:'/product/button-mushrooms', quantity: 1 }
   ];
 
   const [quantities, setQuantities] = useState<number[]>(products.map(() => 1));
