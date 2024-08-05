@@ -46,7 +46,7 @@ const Page: React.FC = () => {
   return (
     <div className='container px-2 '>
       <Navbar />
-      <h1 className='heading text-center mt-[100px]'>The Mushroom Store</h1>
+      <h1 className='heading text-center text-3xl font-bold mt-[80px]'>The Mushroom Store</h1>
       <p className='paragraph text-center mt-5'>
         Welcome to our mushroom store! <br /> 
         Feel free to explore, and don&apos;t forget to pick up a free sample while you&apos;re here.
